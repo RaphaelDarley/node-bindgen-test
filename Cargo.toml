@@ -1,0 +1,15 @@
+[package]
+name = "node-bindgen-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+node-bindgen = { version = "5.1" }
+serde = "1.0.174"
+surrealdb = { version = "1.0.0-beta.9", features = ["kv-mem", "kv-rocksdb"] }
+
+[build-dependencies]
+node-bindgen = { version = "5.1", features = ["build"] }
+
+[lib]
+crate-type = ["cdylib"]
